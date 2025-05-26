@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Les 400 Coups</title>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+    }
+    header img.logo {
+      max-width: 250px;
+      display: block;
+      margin: 2rem auto 1rem auto;
+    }
+    .accroche {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    video {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 0 auto 2rem auto;
+      border-radius: 10px;
+    }
+    .carousel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 0 2rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin: 3rem 0 1rem;
+    }
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      color: #87cefa;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  
+.photo-random {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  margin: 5px;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+</style>
+</head>
+<body>
+<header>
+<img alt="Logo Les 400 Coups" class="logo" src="images/logo.gif" style="width: 300px; height: auto; display: block; margin: 0 auto;"/>
+</header>
+<main>
+<p class="accroche">Un spectacle musical totalement improvisé  !</p>
+<section>
+<video controls="" id="teaser" muted="" playsinline="" src="videos/teaser.mp4"></video>
+</section>
+<section>
+<div class="carousel">
+<img alt="photo" class="photo-random" src="images/Pageaccueiltous1.jpeg"/>
+<img alt="photo" class="photo-random" src="images/Pageaccueiltous2.jpeg"/>
+<img alt="photo" class="photo-random" src="images/Pageaccueiltous3.JPG"/>
+</div>
+<script src="randomPhotos.js"></script>
+</section>
+</main>
+<footer>
+<div class="footer-links">
+<a href="evenement_liste.html">Événements</a> ·
+      <a href="a-propos.html">Qui sommes-nous</a> ·
+      <a href="galerie.html">Photos</a>
+      <a href="partenaires.html">Partenaires</a>
+</div>
+<p>Contact : <a href="mailto:les400coups78@gmail.com">les400coups78@gmail.com</a></p>
+</footer>
+<script>
+window.addEventListener("load", function () {
+  const video = document.getElementById("teaser");
+  if (video) {
+    video.currentTime = 3; // démarre à 3 secondes
+  }
+});
+</script></body>
+</html>

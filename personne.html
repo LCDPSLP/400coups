@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détail de la personne</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; background-color: black; color: white; }
+    img { max-width: 100%; height: auto; border-radius: 10px; }
+    h1 { text-align: center; }
+    p { text-align: justify; }
+  </style>
+</head>
+<body>
+  <h1 id="nom"></h1>
+  <img id="photo" src="" alt="">
+  <p id="bio"></p>
+  <p style="text-align:center;"><a href="a-propos.html">← Retour à la page précédente</a></p>
+
+  <script>
+    const personnes = [
+      {
+        id: "noemie",
+        nom: "Noemie",
+        photo: "images/Noemie.jpeg",
+        bio: "Comédienne depuis 2000, Noemie dirige Courant d’Art depuis 2007. Elle crée des pièces tout public et jeune public mêlant humour et pédagogie. Diplômée en arts du spectacle et communication, elle enseigne le théâtre et l’impro dans les Yvelines. Autrice, metteuse en scène, scénographe, elle mêle engagement artistique et transmission. Elle dirige également sa structure 'Trancoso Noémie et Compagnie'."
+      },
+      {
+        id: "lilou",
+        nom: "Lilou",
+        photo: "images/Lilou.jpeg",
+        bio: "Passionnée par le spectacle vivant, Lilou découvre le théâtre de rue, le cirque et les festivals. Formée en cinéma, elle explore ensuite la mise en scène et la création artistique. Depuis 2016, elle joue et improvise avec énergie. Sensibilisée à l’éducation positive, elle anime des ateliers bienveillants pour enfants. Ses cours allient liberté, confiance et plaisir de jouer."
+      },
+      {
+        id: "eric",
+        nom: "Eric",
+        photo: "images/Eric.jpeg",
+        bio: "On ne sait pas vraiment qui c’est… Mais ce qu’on sait, c’est qu’il est trop bien."
+      },
+      {
+        id: "ericl",
+        nom: "EricL",
+        photo: "images/EricL.jpeg",
+        bio: "Guitariste depuis l’enfance, Eric Lorcey mêle classique, rock et fusion. Il obtient un CFEM, un BTS audiovisuel et se forme à l’école ATLA. Il enchaîne projets musicaux variés depuis son premier concert pro à 14 ans. Musicien de scène, pédagogue et technicien, il aime explorer les styles. Il joue avec passion pour plusieurs groupes et artistes."
+      },
+      {
+        id: "camille",
+        nom: "Camille",
+        photo: "images/Camille.jpeg",
+        bio: "MC professionnel à l'humour exceptionnel"
+      }
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const p = personnes.find(p => p.id === id);
+    if (p) {
+      document.getElementById("nom").textContent = p.nom;
+      document.getElementById("photo").src = p.photo;
+      document.getElementById("photo").alt = p.nom;
+      document.getElementById("bio").innerHTML = p.bio;
+    } else {
+      document.body.innerHTML = "<p>Personne non trouvée.</p>";
+    }
+  </script>
+</body>
+</html>
