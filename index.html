@@ -1,31 +1,37 @@
-
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Les 400 Coups</title>
-<link href="css/style.css" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les 400 Coups</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #111;
       color: #fff;
     }
+
+    /* Logo centré */
     header img.logo {
       max-width: 250px;
       display: block;
-      margin: 2rem auto 1rem auto;
+      margin: 1rem auto 0rem auto;
     }
+
+    /* Phrase d’accroche centrée */
     .accroche {
       text-align: center;
       font-size: 1.2em;
-      margin-bottom: 2rem;
+      margin-bottom: 0.2rem;
+      margin-top: 0rem;
       font-style: italic;
     }
+
+    /* Vidéo teaser */
     video {
       width: 100%;
       max-width: 700px;
@@ -33,76 +39,122 @@
       margin: 0 auto 2rem auto;
       border-radius: 10px;
     }
+
+    /* Bloc des 3 photos en bas */
     .carousel {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      gap: 10px;
+      margin-top: 10px;
     }
+
+    .photo-random {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      margin: 5px;
+    }
+
+    /* Pied de page */
     footer {
       text-align: center;
       font-size: 0.9em;
       margin: 3rem 0 1rem;
     }
+
     .footer-links {
       margin-bottom: 1rem;
     }
+
     .footer-links a {
       color: #87cefa;
       margin: 0 10px;
       text-decoration: none;
     }
-  
-.photo-random {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-  margin: 5px;
-}
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-</style>
+  </style>
 </head>
 <body>
-<header>
-<img alt="Logo Les 400 Coups" class="logo" src="images/logo.gif" style="width: 300px; height: auto; display: block; margin: 0 auto;"/>
-</header>
-<main>
-<p class="accroche">Un spectacle musical totalement improvisé  !</p>
-<section>
-<video controls="" id="teaser" muted="" playsinline="" src="videos/teaser.mp4"></video>
-</section>
-<section>
-<div class="carousel">
-<img alt="photo" class="photo-random" src="images/Pageaccueiltous1.jpeg"/>
-<img alt="photo" class="photo-random" src="images/Pageaccueiltous2.jpeg"/>
-<img alt="photo" class="photo-random" src="images/Pageaccueiltous3.JPG"/>
-</div>
-<script src="randomPhotos.js"></script>
-</section>
-</main>
-<footer>
-<div class="footer-links">
-<a href="evenement_liste.html">Événements</a> ·
+  <!-- Logo -->
+  <header>
+    <img src="images/logo.gif" alt="Logo Les 400 Coups" class="logo" style="width: 300px; height: auto;" />
+  </header>
+
+  <main>
+  
+   <!-- Accroche -->
+    <p class="accroche">Un spectacle musical totalement improvisé !</p>
+  
+    <!-- Bloc pour l'événement "highlight" s’il existe -->
+    <div id="highlightEvent"></div>
+   
+
+    <!-- Vidéo teaser (sera masquée si un événement "highlight" existe) -->
+    <section>
+      <video id="teaser" src="videos/teaser.mp4" controls muted playsinline></video>
+    </section>
+
+    <!-- Trois photos fixes -->
+    <section>
+      <div class="carousel">
+        <img src="images/Pageaccueiltous1.jpeg" alt="photo" class="photo-random" />
+        <img src="images/Pageaccueiltous2.jpeg" alt="photo" class="photo-random" />
+        <img src="images/Pageaccueiltous3.JPG"  alt="photo" class="photo-random" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="footer-links">
+      <a href="evenement_liste.html">Événements</a> ·
       <a href="a-propos.html">Qui sommes-nous</a> ·
-      <a href="galerie.html">Photos</a>
+      <a href="galerie.html">Photos</a> ·
       <a href="partenaires.html">Partenaires</a>
-</div>
-<p>Contact : <a href="mailto:les400coups78@gmail.com">les400coups78@gmail.com</a></p>
-</footer>
-<script>
-window.addEventListener("load", function () {
-  const video = document.getElementById("teaser");
-  if (video) {
-    video.currentTime = 3; // démarre à 3 secondes
-  }
-});
-</script></body>
+    </div>
+    <p>Contact : <a href="mailto:les400coups78@gmail.com">les400coups78@gmail.com</a></p>
+  </footer>
+
+  <!-- Avance automatiquement la vidéo à 3 secondes -->
+  <script>
+    window.addEventListener("load", function () {
+      const video = document.getElementById("teaser");
+      if (video) video.currentTime = 3;
+    });
+  </script>
+
+  <!-- Chargement des événements depuis le fichier JS -->
+  <script src="events_tableau_complet.js"></script>
+
+  <!-- Affichage automatique de l'événement "highlight", sinon affichage de la vidéo -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("highlightEvent");
+      const video = document.getElementById("teaser");
+
+      if (!window.events_tableau_complet) return;
+
+      const event = window.events_tableau_complet.find(e => e.highlight);
+      if (!event) {
+        if (video) video.style.display = 'block';
+        return;
+      }
+
+      // Crée et affiche le bloc de mise en avant
+      const html = `
+        <div style="border: 0px solid red; padding: 0.1rem; max-width: 300px; margin: 0 auto; text-align: center;">
+          <h2 style="color: red;">🎯 Prochainement !</h2>
+          <a href="evenement.html?id=${event.id}" style="text-decoration: none; color: inherit;">
+            <img src="${event.affiche}" alt="${event.titre}" style="width: 100%; height: auto; border-radius: 6px;" />
+            <h3>${event.titre}</h3>
+            <p>${event.date}</p>
+          </a>
+        </div>
+      `;
+      container.innerHTML = html;
+      if (video) video.style.display = 'none';
+    });
+  </script>
+</body>
 </html>

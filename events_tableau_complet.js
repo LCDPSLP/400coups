@@ -72,5 +72,5 @@ const events_tableau = [
   
 ];
 
-
+window.events_tableau_complet = events_tableau;
 window.events_tableau = events_tableau;
