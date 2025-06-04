@@ -15,7 +15,7 @@ const events_tableau = [
     date_iso: "2025-10-20",
     lieu: "Parc des Buissons, Vernouillet",
     description: "Un spectacle d'automne où l'improvisation chante la saison et vos envies.",
-    affiche: "images/affiche_400_coups.png",
+    affiche: "images/Affiches/affiche20251020.png",
         highlight: false
 
   },
@@ -26,7 +26,7 @@ const events_tableau = [
     date_iso: "2025-06-27",
     lieu: "<span style='color:red'>Le Boucanier</span>  <br>Allée des Iles Tabarly <br>78200 Mantes-la-Jolie. <br>Restaurant dès 19h30. <br>Réservation :<br> <a href='https://www.leboucanier.net' target='_blank'>www.leboucanier.net</a><br> 01.30.63.70.30",
     description: "Improviser, c'est possible. <br>Chanter, c'est possible. <br>Mais improviser en chantant ? <br> Bah c'est possible !",
-    affiche: "images/affiche_27_06_2025.jpg",
+    affiche: "images/Affiches/affiche_27_06_2025.jpg",
         highlight: true
   },
   
@@ -37,7 +37,7 @@ const events_tableau = [
     date_iso: "2024-06-16",
     lieu: "LaPéniche de Triel, 69 Quai Auguste Roy 78 Triel sur Seine",
     description: "Un spectacle remplie d'eau.",
-    affiche: "images/affiche_16_06_2024.jpg",
+    affiche: "images/Affiches/affiche_16_06_2024.jpg",
         highlight: false
   },
   
@@ -48,7 +48,7 @@ const events_tableau = [
     date_iso: "2024-05-26",
     lieu: "La Péniche de Triel, 69 Quai Auguste Roy 78 Triel sur Seine",
     description: "apprendre à inventer et chanter une chanson improvisée: paroles, interprétation, mélodie...",
-    affiche: "images/affiche_26_05_2024.jpg",
+    affiche: "images/Affiches/affiche_26_05_2024.jpg",
         highlight: false
   },
   
@@ -60,7 +60,7 @@ const events_tableau = [
     date_iso: "2024-05-25",
     lieu: "Espace Bosco (EDMA) Boulevard de l'Europe 78540 Vernouillet",
     description: "Chansons chantés sans son chien",
-    affiche: "images/affiche_16_06_2024.jpg",
+    affiche: "images/Affiches/affiche_16_06_2024.jpg",
         highlight: false
   }
   
