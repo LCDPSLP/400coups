@@ -1,7 +1,7 @@
 const bios = {
-  noemie: "Elle chante, elle improvise, et surtout, elle refuse de choisir : elle improvise en chantant, tout simplement.",
-  lilou: "Avec son cerveau en freestyle, elle découvre ce qu’elle chante en même temps que vous. Suspense et surprises garantis !",
-  eric: "Il ignore ce qu’il va chanter. Son cerveau improvise en douce pendant que sa bouche fait semblant de savoir...",
-  ericl: "Tout le monde aime les pommes de terre",
+  noemie: "Elle aime chanter, elle aime improviser et comme elle n'aime pas faire de choix, elle fait les deux en même temps...",
+  lilou: "Avec son cerveau en freestyle, elle découvre ce qu’elle chante en même temps que le public. Suspense et surprises garantis !",
+  eric: "Anciennement Michael Jackson, il a préféré rejoindre les 400 coups pour améliorer son style.",
+  ericl: "Tombé dans une guitare quand il était petit, cela ne l'empêche pas de ne pas jouer de la harpe.",
   camille: "MC professionnel à l'humour exceptionnel"
 };
