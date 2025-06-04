@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<title>Qui sommes-nous – Les 400 Coups</title>
-<link href="css/style.css" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8" />
+  <title>Qui sommes-nous – Les 400 Coups</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
     .team-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -31,90 +29,95 @@
       overflow: hidden;
       line-height: 1.5em;
     }
+    .bio {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .tooltip {
+      position: fixed;
+      display: none;
+      background-color: rgba(150, 150, 150, 0.9);
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      max-width: 280px;
+      font-size: 0.95em;
+      line-height: 1.3em;
+      z-index: 1000;
+      pointer-events: none;
+      text-align: justify;
+    }
   </style>
-<style>
-.bio {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-</style><style>
-.bio {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-</style><style>
-.tooltip {
-  position: fixed;
-  display: none;
-  background-color: rgba(150, 150, 150, 0.9);
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  max-width: 280px;
-  font-size: 0.95em;
-  line-height: 1.3em;
-  z-index: 1000;
-  pointer-events: none;
-   text-align: justify;
-}
-</style></head>
+</head>
 <body>
-<header>
-<img alt="Logo Les 400 Coups" class="logo" src="images/logo.jpg" style="max-width: 200px; display: block; margin: 2rem auto;"/>
-</header>
-<main>
-<h1 style="text-align:center;">Qui sommes-nous</h1>
-<section class="team-grid">
-<div class="team-member">
-<a href="personne.html?id=noemie"><img alt="Noemie" data-remove="Comédienne depuis 2000, Noémie dirige Courant d’Art depuis 2007. Elle crée des pièces tout public et jeune public mêlant humour et pédagogie. Diplômée en arts du spectacle et communication, elle enseigne le théâtre et l’impro dans les Yvelines. Autrice, metteuse en scène, scénographe, elle mêle engagement artistique et transmission. Elle dirige également sa structure 'Trancoso Noémie et Compagnie'." src="images/Noemie.jpeg"/></a>
-<h3>Noemie</h3>
-<p class="bio">Comédienne depuis 2000, Noemie dirige Courant d’Art depuis 2007. Elle crée des pièces tout public et jeune public mêlant humour et pédagogie. Diplômée en arts du spectacle et communication, elle enseigne le théâtre et l’impro dans les Yvelines. Autrice, metteuse en scène, scénographe, elle mêle engagement artistique et transmission. Elle dirige également sa structure "Trancoso Noémie et Compagnie".</p>
-</div>
-<div class="team-member">
-<a href="personne.html?id=lilou"><img alt="Lilou" data-remove="Passionnée par le spectacle vivant, Lilou découvre le théâtre de rue, le cirque et les festivals. Formée en cinéma, elle explore ensuite la mise en scène et la création artistique. Depuis 2016, elle joue et improvise avec énergie. Sensibilisée à l’éducation positive, elle anime des ateliers bienveillants pour enfants. Ses cours allient liberté, confiance et plaisir de jouer." src="images/Lilou.jpeg"/></a>
-<h3>Lilou</h3>
-<p class="bio">Passionnée par le spectacle vivant, Lilou découvre le théâtre de rue, le cirque et les festivals. Formée en cinéma, elle explore ensuite la mise en scène et la création artistique. Depuis 2016, elle joue et improvise avec énergie. Sensibilisée à l’éducation positive, elle anime des ateliers bienveillants pour enfants. Ses cours allient liberté, confiance et plaisir de jouer.</p>
-</div>
-<div class="team-member">
-<a href="personne.html?id=eric"><img alt="Eric" data-remove="On ne sait pas vraiment qui c’est… Mais ce qu’on sait, c’est qu’il est trop bien." src="images/Eric.jpeg"/></a>
-<h3>Eric</h3>
-<p class="bio">On ne sait pas vraiment qui c’est… Mais ce qu’on sait, c’est qu’il est trop bien.</p>
-</div>
-<div class="team-member">
-<a href="personne.html?id=ericl"><img alt="EricL" data-remove="Guitariste depuis l’enfance, Eric Lorcey mêle classique, rock et fusion. Il obtient un CFEM, un BTS audiovisuel et se forme à l’école ATLA. Il enchaîne projets musicaux variés depuis son premier concert pro à 14 ans. Musicien de scène, pédagogue et technicien, il aime explorer les styles. Il joue avec passion pour plusieurs groupes et artistes." src="images/EricL.jpeg"/></a>
-<h3>EricL</h3>
-<p class="bio">Guitariste depuis l’enfance, Eric Lorcey mêle classique, rock et fusion. Il obtient un CFEM, un BTS audiovisuel et se forme à l’école ATLA. Il enchaîne projets musicaux variés depuis son premier concert pro à 14 ans. Musicien de scène, pédagogue et technicien, il aime explorer les styles. Il joue avec passion pour plusieurs groupes et artistes.</p>
-</div>
-<div class="team-member">
-<a href="personne.html?id=camille"><img alt="Camille" data-remove="MC professionnel à l'humour exceptionnel" src="images/Camille.jpeg"/></a>
-<h3>Camille</h3>
-<p class="bio">MC professionnel à l'humour exceptionnel</p>
-</div>
-</section>
-<p style="text-align:center;"><a href="index.html">← Retour à l’accueil</a></p>
-</main>
-<div class="tooltip" id="tooltip"></div><script>
-document.addEventListener('DOMContentLoaded', function () {
-  const tooltip = document.getElementById('tooltip');
-  const members = document.querySelectorAll('.team-member img');
+  <header>
+    <img alt="Logo Les 400 Coups" class="logo" src="images/logo.jpg" style="max-width: 200px; display: block; margin: 2rem auto;" />
+  </header>
+  <main>
+    <h1 style="text-align:center;">Qui sommes-nous</h1>
+    <section class="team-grid">
+      <div class="team-member">
+        <a href="personne.html?id=noemie"><img alt="Noemie" src="images/Noemie.jpeg" data-personne="noemie" /></a>
+        <h3>Noemie</h3>
+        <p class="bio" id="bio-noemie"></p>
+      </div>
+      <div class="team-member">
+        <a href="personne.html?id=lilou"><img alt="Lilou" src="images/Lilou.jpeg" data-personne="lilou" /></a>
+        <h3>Lilou</h3>
+        <p class="bio" id="bio-lilou"></p>
+      </div>
+      <div class="team-member">
+        <a href="personne.html?id=eric"><img alt="Eric" src="images/Eric.jpeg" data-personne="eric" /></a>
+        <h3>Eric</h3>
+        <p class="bio" id="bio-eric"></p>
+      </div>
+      <div class="team-member">
+        <a href="personne.html?id=ericl"><img alt="EricL" src="images/EricL.jpeg" data-personne="ericl" /></a>
+        <h3>EricL</h3>
+        <p class="bio" id="bio-ericl"></p>
+      </div>
+      <div class="team-member">
+        <a href="personne.html?id=camille"><img alt="Camille" src="images/Camille.jpeg" data-personne="camille" /></a>
+        <h3>Camille</h3>
+        <p class="bio" id="bio-camille"></p>
+      </div>
+    </section>
+    <p style="text-align:center;"><a href="index.html">← Retour à l’accueil</a></p>
+  </main>
 
-  members.forEach(img => {
-    img.addEventListener('mousemove', function (e) {
-      tooltip.style.display = 'block';
-      tooltip.textContent = img.getAttribute('data-remove');
-      tooltip.style.top = (e.clientY + 15) + 'px';
-      tooltip.style.left = (e.clientX + 15) + 'px';
+  <div class="tooltip" id="tooltip"></div>
+
+  <script src="bio.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      for (const id in bios) {
+        const el = document.getElementById("bio-" + id);
+        if (el) el.textContent = bios[id];
+
+        const img = document.querySelector('img[data-personne="' + id + '"]');
+      if (img) {
+  img.dataset.tooltip = bios[id]; // on stocke le texte sans déclencher la bulle native
+}
+      }
+
+      const tooltip = document.getElementById('tooltip');
+      const members = document.querySelectorAll('.team-member img');
+
+      members.forEach(img => {
+        img.addEventListener('mousemove', function (e) {
+          tooltip.style.display = 'block';
+tooltip.textContent = img.dataset.tooltip;
+          tooltip.style.top = (e.clientY + 15) + 'px';
+          tooltip.style.left = (e.clientX + 15) + 'px';
+        });
+        img.addEventListener('mouseleave', function () {
+          tooltip.style.display = 'none';
+        });
+      });
     });
-    img.addEventListener('mouseleave', function () {
-      tooltip.style.display = 'none';
-    });
-  });
-});
-</script></body>
+  </script>
+</body>
 </html>
