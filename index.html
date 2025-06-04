@@ -96,13 +96,11 @@
     </section>
 
     <!-- Trois photos fixes -->
-    <section>
-      <div class="carousel">
-        <img src="images/Pageaccueiltous1.jpeg" alt="photo" class="photo-random" />
-        <img src="images/Pageaccueiltous2.jpeg" alt="photo" class="photo-random" />
-        <img src="images/Pageaccueiltous3.JPG"  alt="photo" class="photo-random" />
-      </div>
-    </section>
+   <section class="carousel-wrapper">
+  <a href="galerie.html" style="display: block;">
+    <div class="carousel-track" id="carouselTrack"></div>
+  </a>
+</section>
   </main>
 
   <!-- Pied de page -->
@@ -156,5 +154,40 @@
       if (video) video.style.display = 'none';
     });
   </script>
+
+<script>
+  const allImages = [
+    "images/page1/photo01.jpeg",
+    "images/page1/photo02.JPG",
+    "images/page1/photo03.jpeg",
+    "images/page1/photo04.jpeg",
+    "images/page1/photo05.jpeg",
+    "images/page1/photo06.jpeg",
+    "images/page1/photo07.jpeg",
+    "images/page1/photo08.jpeg",
+    "images/page1/photo09.jpeg",
+    "images/page1/photo10.jpeg",
+    "images/page1/photo11.JPG",
+    "images/page1/photo12.JPG",
+    "images/page1/photo13.JPG",
+    "images/page1/photo14.JPG",
+    "images/page1/photo15.JPG"
+  ];
+
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  const selected = shuffle([...allImages]).slice(0, 15);
+  const track = document.getElementById("carouselTrack");
+
+  [...selected, ...selected].forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "photo";
+    track.appendChild(img);
+  });
+</script>
+
 </body>
 </html>
