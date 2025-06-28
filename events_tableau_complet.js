@@ -27,7 +27,7 @@ const events_tableau = [
     lieu: "<span style='color:red'>Le Boucanier</span>  <br>Allée des Iles Tabarly <br>78200 Mantes-la-Jolie. <br>Restaurant dès 19h30. <br>Réservation :<br> <a href='https://www.leboucanier.net' target='_blank'>www.leboucanier.net</a><br> 01.30.63.70.30",
     description: "Improviser, c'est possible. <br>Chanter, c'est possible. <br>Mais improviser en chantant ? <br> Bah c'est possible !",
     affiche: "images/Affiches/affiche_27_06_2025.jpg",
-        highlight: true
+        highlight: false
   },
   
   {
